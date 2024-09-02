@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/Views/Widgets/addNoteBottSheet.dart';
 
+import '../constants/colors.dart';
 import 'Widgets/notes_view_body.dart';
 
 class NotesView extends StatelessWidget {
@@ -26,7 +27,7 @@ class NotesView extends StatelessWidget {
 
         );
       },
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: KPrimaryColor,
         shape: CircleBorder(),
       child: Icon(
           Icons.add,
