@@ -4,9 +4,9 @@ abstract class AddNotesStates{}
 
 class AddNoteInitialState extends AddNotesStates{}
 
-class AddNoteLoadingState extends AddNotesStates{}
-
 class AddNoteSuccessState extends AddNotesStates{}
+
+class AddNoteLoadingState extends AddNotesStates{}
 
 class AddNoteFailureState extends AddNotesStates{
   final String errorMessage;
