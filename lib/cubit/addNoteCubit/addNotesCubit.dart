@@ -3,7 +3,6 @@ import 'package:hive/hive.dart';
 import 'package:untitled/constants/texts.dart';
 import 'package:untitled/models/note_model.dart';
 
-import 'AddNotesStates.dart';
 
 
 part 'AddNotesStates.dart';
