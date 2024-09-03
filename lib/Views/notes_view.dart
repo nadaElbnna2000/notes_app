@@ -1,42 +1,48 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/Views/Widgets/addNoteBottSheet.dart';
+import 'package:untitled/cubit/notes_cubit/notesCubit.dart';
 
 import '../constants/colors.dart';
 import 'Widgets/notes_view_body.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-
-
-      floatingActionButton: FloatingActionButton(
-
-        onPressed: (){
-        showModalBottomSheet(
-          isScrollControlled: true,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
-            context: context,
-            builder: (context){
-          return const AddNoteBottomSheet();
-            }
-        );
-      },
-        backgroundColor: KPrimaryColor,
-        shape: CircleBorder(),
-      child: Icon(
-          Icons.add,
-        color: Colors.black,
-
+    return  BlocProvider(
+      create : (context) => notesCubit(),
+      child: Scaffold(
+      
+      
+        floatingActionButton: FloatingActionButton(
+      
+          onPressed: (){
+          showModalBottomSheet(
+            isScrollControlled: true,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+              context: context,
+              builder: (context){
+            return const AddNoteBottomSheet();
+              }
+          );
+        },
+          backgroundColor: KPrimaryColor,
+          shape: CircleBorder(),
+        child: Icon(
+            Icons.add,
+          color: Colors.black,
+      
+        ),
+        ),
+      
+        body: NotesViewBody(),
       ),
-      ),
-
-      body: NotesViewBody(),
     );
   }
 }
