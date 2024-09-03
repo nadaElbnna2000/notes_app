@@ -39,7 +39,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
       child: Column(
         children: [
 
-          SizedBox(
+          const SizedBox(
             height: 32,
           ),
 
@@ -52,7 +52,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             hint: 'title',
           ),
 
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           CustomTextField(
@@ -66,15 +66,19 @@ class _AddNoteFormState extends State<AddNoteForm> {
           ),
 
 
-          SizedBox(
-            height: 20,
+          const SizedBox(
+            height: 32,
           ),
 
-          ColorListView(),
+          const ColorListView(
+
+
+            
+          ),
 
 
 
-          SizedBox(
+          const SizedBox(
             height: 32,
           ),
 
