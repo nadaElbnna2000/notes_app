@@ -5,7 +5,7 @@ part 'note_model.g.dart';
 
 @HiveType(typeId: 0)
 
-class NoteModel{
+class NoteModel extends HiveObject{
 
 
   @HiveField(0)
