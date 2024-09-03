@@ -6,3 +6,4 @@ abstract class notesStates{}
 
 class notesInitialState extends notesStates{}
 
+class notesSuccessState extends notesStates{}

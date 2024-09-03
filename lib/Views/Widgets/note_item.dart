@@ -2,8 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:untitled/Views/edit_note_view.dart';
+import 'package:untitled/cubit/notes_cubit/notesCubit.dart';
 
 import '../../models/note_model.dart';
+
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class NoteItem extends StatelessWidget {
   const NoteItem({super.key, required this.note});
@@ -59,6 +62,7 @@ class NoteItem extends StatelessWidget {
               trailing: IconButton(
                 onPressed: (){
                   note.delete();
+                  BlocProvider.of<notesCubit>(context).fetchAllNotes();
                 },
                 icon:const Icon(
                   FontAwesomeIcons.trash,
