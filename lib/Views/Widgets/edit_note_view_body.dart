@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/Views/Widgets/custom_textField.dart';
+import 'package:untitled/Views/Widgets/editNotesColorsList.dart';
 import 'package:untitled/cubit/notes_cubit/notesCubit.dart';
 import 'package:untitled/models/note_model.dart';
 
+import 'ColorsItem.dart';
 import 'custom_app_bar.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -70,8 +72,16 @@ class _editNoteViewBodyState extends State<editNoteViewBody> {
             },
           ),
 
+          SizedBox(
+            height: 16,
+          ),
+           Editnotescolorslist(
+            note: widget.note
+            ,),
         ],
       ),
+
+
     );
   }
 }
